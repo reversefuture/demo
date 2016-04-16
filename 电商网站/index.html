@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dmail</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			font-size: 12px;
+			line-height: 1.7
+		}
+		li{
+			list-style: none;
+		}
+		#content{
+			width:800px;
+			margin:0 auto;
+			padding: 20px;
+		}
+		#content h1{
+			color:#019;
+		}
+		.item{
+			padding: 20px;
+			margin-bottom: 20px;
+			border: 1px dotted #a31;
+		}
+		.item h2{
+			font-size: 12px;
+			font-weight: bold;
+			border-bottom: 2px solid #081;
+			margin-bottom: 10px;
+		}
+		.item li{
+			display: inline;
+			margin-right: 10px;
+		}
+		.item li a img{
+			width: 230px;
+			height: 230px;
+			border:none;
+		}
+		#menu{
+			position: fixed;
+			top:100px;
+			left: 50%;
+			margin-left: 400px;
+			width: 180px;
+		}
+		#menu li a{
+			display: block;
+			margin:5px 0;
+			font-size: 14px;
+			font-weight: bold;
+			color:#333;
+			width:160px;
+			height: 50px;
+			border:1px solid #18a;
+			line-height: 50px;
+			text-decoration: none;
+			text-align: center;
+		}
+		#menu li a:hover,#menu li a.current{
+			color:#FFF;
+			background: #855;
+		}
+		/*hack
+		通过一些特殊的编码，达到区分不同的浏览器，为不同的浏览器设置不同的样式
+		*/
+	/*ie6 hack*/
+	*html #menu li a.current{
+			background: red;
+			/*解决不支持fixed*/
+			position:absolute;
+			top:expression(((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+100+"px");
+		}
+	*html,*html body{
+		background-image: url(about:blank);
+		background-attachment: fixed;
+	}
+	</style>
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li><a href="#item1" class="current">1F man's cloth</a></li>
+			<li><a href="#item2">2F woman's cloth</a></li>
+			<li><a href="#item3">3F cosmetics</a></li>
+			<li><a href="#item4">4F electronics</a></li>
+		</ul>
+	</div>
+	<div id="content" class="content">
+		<h1>dmail shopping website</h1>
+		<div id="item1" class="item">
+			<h2>man's cloth</h2>
+			<ul>
+				<li><a href="#"><img src="img/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/1F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item2" class="item">
+			<h2>woman's cloth</h2>
+			<ul>
+				<li><a href="#"><img src="img/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/2F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item3" class="item">
+			<h2>cosmetics</h2>
+			<ul>
+				<li><a href="#"><img src="img/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/3F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item4" class="item">
+			<h2>electronics/h2>
+			<ul>
+				<li><a href="#"><img src="img/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/4F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			//滚动条发生滚动
+			$(window).scroll(function(event) {
+				var top=$(document).scrollTop();
+				var menu=$("#menu");
+				//使用id查找元素效率更高
+				var items=$("#content").find('.item');
+				var currentId="";//当前所在楼层（item），#id
+				items.each(function(){
+					var m=$(this);
+					var itemTop=m.offset().top;
+					// console.log(itemTop);
+					if (top>itemTop-200){//当页面展现出当前楼层大部分时获得焦点
+						currentId="#"+m.attr("id");
+					}else{
+						return false;
+					}
+					
+					});
+					//给每层楼的a设置current，取消其他楼层的current。
+					var currentLink=menu.find('.current');//参数为元素选择器
+					if(currentId&&currentId!=currentLink.attr('href')){
+						currentLink.removeClass('current');
+						menu.find('[href="'+currentId+'"]').addClass('current');
+					}
+			});
+		});
+	</script>
+</body>
+</html>
