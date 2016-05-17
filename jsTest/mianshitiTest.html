@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.list{
+			list-style: none;
+			margin:20px auto;
+		}
+		.list .item{
+			margin-top: 10px;
+			font: bold 14px 'Microsoft Yahei';
+		}
+		.btn{
+			margin-right: 10px;
+			width:60px;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li class="item">去你吗的有病吧去死！<button class="btn">修改</button></li>
+		<li class="item">去你吗的有病吧去死！<button class="btn">修改</button></li>
+		<li class="item">去你吗的有病吧去死！<button class="btn">修改</button></li>
+	</ul>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+	var list = $('.list');
+	var items  = $('.list .item');
+	var btns = $('.list .btn');
+	
+	btns.bind('click',function () {
+		btnClick(this);
+	})
+
+	function  secondClick(obj) {
+
+		var item=$(obj).parent('.item');
+		var inp = item.find('input[type="text"]');
+		var itemStr = inp.val();
+		alert(itemStr);
+		var newItem = '<li class="item">'+itemStr +'<button class="btn" onclick="btnClick(this)">修改</button></li>'
+		item.after(newItem);
+		item.remove();
+	}
+
+	function btnClick(obj) {
+		var item=$(obj).parent('.item');
+		var itemStr = item.text();
+		itemStr = itemStr.slice(0,itemStr.length-2)
+		var newItem = '<li class="item">'+'<input type="text" value="'+ itemStr +'"/>'+'<button class="btn" onclick="secondClick(this)">保存</button></li>'
+		item.after(newItem);
+		item.remove();
+		var newBtn =$(newItem).find('.btn');
+
+		// 没作用啊
+		/*newBtn.bind('click',function (newBtn) {
+			alert();
+			secondClick();
+		});*/
+		newBtn.get(0).onclick = secondClick(newBtn); 
+	}
+
+
+
+
+
+
+
+
+		foo = function(){
+		    this.myName = "Foo function.";
+		}
+		foo.prototype.sayHello = function(){
+		    alert(this.myName);
+		}
+		foo.prototype.bar = function(){
+			var _self = this;
+		    setTimeout(
+		    	/*(function(obj){
+                    return function(){
+                        obj.sayHello();
+                    }
+              })(_self), 1000);*/
+              function(){
+				_self.sayHello();
+			}, 1000);	
+		}
+		var f = new foo();
+		// f.bar();
+	</script>
+</body>
+</html>
