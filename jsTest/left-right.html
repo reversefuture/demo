@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.main1{
+			vertical-align: 
+			text-bottom;
+			overflow: hidden;
+			border:1px solid #00f;
+		}
+		.main1 .left{
+			margin-right: 310px;
+			border:1px solid #f00;
+			overflow: hidden;
+		}
+		.main1 .right{
+			width: 300px;
+			float:right;
+			border:1px solid #f00
+		}
+
+		.main2 {
+		    position: relative;
+		    border:1px solid #00f;
+		    float: left;
+		    margin-top: 20px;
+		    width: 100%;
+		  }
+		  .main2 .right2 {
+		    width: 300px; 
+		    position: absolute; 
+		    right: 0; 
+		    top: 0;
+		    border:1px solid #f00
+		  }
+		  .main2 .left2{
+		    margin-right: 310px;
+		    border:1px solid #f00
+		}
+
+		.main3 {
+		    width: 100%;
+			border:1px solid #00f;
+			margin-top: 300px;
+			overflow: hidden;
+		  }
+		  .main3 .right3 {
+		   	width:300px; 
+		   	margin-left:  -304px;/*  设置box-sizing:border-box就可以设置为-300px */
+		   	border:1px solid #0f0;
+		   	float:left;
+		   }
+		  .main3 .left3{
+		     width:100%;  
+		     border:1px solid #0f0;
+		     float:left;
+		}
+		
+		.main4 {
+		    width: 100%;
+			border:1px solid #00f;
+			margin-top: 20px;
+			overflow:hidden;
+		  }
+		.right4 {
+		    width: 300px; 
+		    float: right;
+		    border:1px solid #0f0
+		  }
+		  .left4 {
+		    margin-left: -310px; 
+		    float: left; 
+		    width: 100%;
+		    border:1px solid #f00
+		  }
+		  .left4b {
+		    margin-left: 310px;
+		    border:1px solid #f00
+		  }
+
+		.main5 {
+		    width: 100%;
+			border:1px solid #00f;
+			margin-top: 20px;
+			overflow:hidden;
+		  }
+		.right5 {
+		    width: 300px; 
+		    float: left;
+		    border:1px solid #0f0;
+		    margin-left:-300px;
+		  }
+		  .left5 {
+		     width: 100%;
+		    border:1px solid #f00
+		  }
+		  
+		  .main6 {
+		    width: 100%;
+			border:1px solid #00f;
+			margin-top: 20px;
+			overflow:hidden;
+			display: table;
+		  }
+		.right6 {
+		    width: 300px; 
+		    display: table-cell;
+		    border:1px solid #0f0
+		  }
+		  .left6 {
+		    margin-right:10px; 
+		    display: table-cell;
+		    border:1px solid #f00
+		  }
+	</style>
+</head>
+<body>
+	<div class="main1 main">
+		<div class="right">固定宽度区<img src="http://img.mukewang.com/56551e2800014fa909600720-240-180.jpg" alt=""></div>
+		<div class="left">自适应区</div>
+	</div>
+	<div class="main2 main">
+		<div class="left2">自适应区</div>
+		<div class="right2">固定宽度区<img src="http://img.mukewang.com/56551e2800014fa909600720-240-180.jpg" alt="">叫你别用绝对定位，父元素高度都塌陷了</div>
+	</div>
+	
+	<div class="main3 main">
+		<div class="left3">自适应区</div>
+		<div class="right3">固定宽度区<img src="http://img.mukewang.com/56551e2800014fa909600720-240-180.jpg" alt="">固定宽度区</div>
+	</div>
+
+	<div class="main4">
+		<div class="left4">
+			<div class="left4b">自适应区</div>
+		</div>
+		<div class="right4">固定宽度区<img src="http://img.mukewang.com/56551e2800014fa909600720-240-180.jpg" alt="">固定宽度区</div>
+	</div>
+	
+	<div class="main6">
+		<div class="left6">
+			固定宽度区</div>
+		<div class="right6">固定宽度区<img src="http://img.mukewang.com/56551e2800014fa909600720-240-180.jpg" alt="">固定宽度区</div>
+	</div>
+</body>
+</html>
