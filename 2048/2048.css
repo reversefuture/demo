@@ -30,6 +30,11 @@ header p{
     margin:20px auto;
 }
 
+.tip{
+    font-family: Arial ,"微软雅黑";
+    text-align: center;
+}
+
 #grid-container{
     width:460px;
     height: 460px;
