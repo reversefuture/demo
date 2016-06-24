@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2016/04/03.
- */
 function showNumberAnimation(i,j,randNumber) {
     var numberCell = $('#number-' + i + '-' + j);
     numberCell.css('background-color', getNumberBackColor(randNumber));

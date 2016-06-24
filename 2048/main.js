@@ -1,11 +1,6 @@
-/**
- * Created by liuyubobobo on 14-4-11.
- * my site: http://www.liuyubobobo.com
- */
-
-var board = new Array();
+var board = [];
 var score = 0;
-var hasConflict=new Array();
+var hasConflict= [];
 var startx= 0,
     starty= 0,
     endx = 0,
@@ -54,8 +49,8 @@ function init(){
         }
 
     for( var i = 0 ; i < 4 ; i ++ ){
-        board[i] = new Array();
-        hasConflict[i]=new Array();
+        board[i] = [];
+        hasConflict[i]= [];
         for( var j = 0 ; j < 4 ; j ++ ){
             board[i][j] = 0;
             hasConflict[i][j]=false;
@@ -103,15 +98,17 @@ function generateOneNumber(){
     var randx = parseInt( Math.floor( Math.random()  * 4 ) );
     var randy = parseInt( Math.floor( Math.random()  * 4 ) );
 
-    var times=0;
+    //产生随机位置的次数
+    var times=0; 
     while( times < 50 ){
         if( board[randx][randy] == 0 )
             break;
-
+        // 随机位置面板数字为0，重新产生
         randx = parseInt( Math.floor( Math.random()  * 4 ) );
         randy = parseInt( Math.floor( Math.random()  * 4 ) );
         times ++;
     }
+    //超过50次后遍历面板数字，指定随机位置
     if (times == 50){
         for( var i = 0 ; i < 4 ; i ++ )
             for( var j = 0 ; j < 4 ; j ++ ){

@@ -95,6 +95,7 @@ function canMoveDown( board ){
     return false;
 }
 
+//col1列和col2列之间是否有阻碍
 function noBlockHorizontal(row,col1 , col2 ,board){
     for(var i = col1+1;i <col2;i ++)
         if(board[row][i] != 0){

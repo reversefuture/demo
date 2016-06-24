@@ -10,7 +10,7 @@ header h1{
 header h2{
     font:14px bold Arial ,"微软雅黑";
 }
-header #newGame{
+header #newgame{
     display:block;
     margin: 20px auto;
     width:180px;
@@ -21,7 +21,7 @@ header #newGame{
     border-radius: 10px;
     text-decoration: none;
 }
-header #newGame:hover{
+header #newgame:hover{
     background: #4f1;
 }
 header p{
