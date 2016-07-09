@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>line</title>
+    <style type="text/css">
+        html{
+            color:#000;
+            background:#eee;
+        }
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+            margin:0;
+            padding:0;
+        }
+        body{
+            position: relative;
+        }
+        .wrap{
+            background-color: #eee;
+            width: 980px;
+            margin:0 auto;
+            box-sizing: border-box;
+        } 
+        .wrap h2{
+            text-align: center;
+            margin:20px auto;
+        }
+        #aside{
+            float: left;
+            width: 300px;
+            height: 800px;
+            border:1px solid #00f;
+        }  
+        .component{
+            float: left;
+            width: 60px;
+            height: 60px;
+            margin-top: 10px;
+            margin-left: 10px;
+            border:1px solid #000;
+            text-align: center;
+            
+        }
+        .dropComponent{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border:1px solid #000;
+            text-align: center;
+            
+        }
+         #aside .component:hover{
+            cursor: move;
+         }
+         .rect{
+            border-radius: 0;
+        }
+         .arc{
+            border-radius: 30px;
+        }
+        #main{
+            position:relative;
+            margin-left: 310px;
+            overflow: hidden;
+            height: 800px;
+            border:1px solid #00f;
+        }
+        .dragging{
+            display: none;
+        }
+       div.line { 
+        position: absolute;     
+        z-index:2;    
+        height:5px;    
+        font-size:1px;    
+        background-color:#0000FF;    
+        overflow:hidden;    
+    }   
+        #prompt{
+            visibility: hidden;
+            width:200px;
+            height: 200px;
+            position: absolute;
+            border:1px solid #000;
+            background-color: #ddd;
+        }
+        #prompt .row{
+            border-bottom: 1px solid #000;
+            text-align: center;
+            font-size: 14px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>拖动左边组件到右边编辑</h2>
+        <h2>画直线：鼠标按下，拖动一段距离后释放</h2>
+        <h2>编辑：双击组件或者直线，弹出编辑菜单后编辑,在有重叠的地方点击下发组件无效</h2>
+        <h2>还可以有更多功能，但最基本最关键的已经实现</h2>
+        <aside id="aside">
+            <div class="rect component" id="rect">rect</div>
+            <div class="rect component" id="rect">rect</div>
+            <div class="arc component" id="arc">arc</div>
+            <div class="arc component" id="arc">arc</div>
+            <div class="arc component" id="arc">arc</div>
+        </aside>
+        <main id="main">
+            
+            <div id="prompt">
+                <div class="row" id="changeColor">改变颜色</div>
+                <div class="row" id="deleteSelf">删除</div>
+                <div class="row" id="cancel">取消</div>
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="line.js"></script>
+</body>
+</html>

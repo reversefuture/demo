@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>无标题文档</title>  
+<style type="text/css">  
+div.line {    
+    position:absolute;    
+    z-index:2;    
+    width:1px;    
+    height:1px;    
+    font-size:1px;    
+    background-color:#0000FF;    
+    overflow:hidden;    
+} 
+#container{
+	position: relative;
+}  
+</style>  
+<script type="text/javascript">  
+function createPoint(container, x, y) {    
+    var node = document.createElement("div");    
+    node.className = "line";    
+    node.style.top=y;    
+    node.style.left=x;    
+    container.appendChild(node);    
+}  
+function line(startX, startY, endX, endY, container) {    
+    if (startX == endX) {  
+        if (startY > endY) {    
+            var tempY = startY;    
+            startY = endY;    
+            endY = tempY;    
+        }  
+        for (var k = startY; k < endY; k++) {  
+            createPoint(container, startX, k);    
+        }  
+        return;  
+    }    
+    // y = ax + b，<span style="color:#ff0000;">这里深刻体现了数学的重要性啊    
+    var a = (startY - endY) / (startX - endX);  
+    var b = startY - ((startY - endY) / (startX - endX)) * startX;  
+    if (Math.abs(startX - endX) > Math.abs(startY - endY)) { //这是为了多画几个point加的选择  
+        if (startX > endX) {    
+            var tempX = endX;    
+            endX = startX;    
+            startX = tempX;    
+        }  
+        for (var i = startX; i <= endX; i++) {    
+            createPoint(container, i, a * i + b);    
+        }    
+    } else {  
+        if (startY > endY) {    
+            var tempY = startY;    
+            startY = endY;    
+            endY = tempY;    
+        }  
+        for (var j = startY; j <= endY; j++) {  
+            createPoint(container, (j - b) / a, j);    
+        }  
+    }    
+}  
+function testLine() {    
+    line(0,0, 88, 88, document.getElementById("container"));    
+}    
+</script>  
+</head>  
+  
+<body>  
+    <div id="container" style="width:400px;height:400px;border:1px solid #000000;margin-left:50px"></div>    
+    <input type="button" value="line" onclick="testLine()"></input>    
+</body>  
+</html>  
