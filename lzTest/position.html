@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pseudo</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		.com-text{
+			background: #eee;
+			border-radius: 5px;
+			font-family: simsun;
+			margin: 0 10px 10px ;
+			border:1px solid #00f;
+		}
+		.wrap{
+			margin: 0 10px 10px ;
+			background: #eee;
+			border:1px solid #00f;
+			height: 400px;
+		}
+		.lineh-wrap{
+			line-height: 400px;
+			
+		}
+		.item{
+			width:400px;
+			height: 80px;
+			background: #099;
+			color:#fff;
+		}
+		.lineh{
+			
+			line-height: 80px;
+			
+		}
+		.abs2{
+			margin: auto;
+		}
+		.equaltb-wrap{
+			padding: 5% 0;
+		}
+		.equaltb{
+			padding: 10% 0;
+		}
+		.floater {
+		  float: left;
+		  height: 50%;
+		  width: 100%;
+		  margin-bottom: -40px;
+		  outline: 1px solid red;
+		}
+		.floater ~ .item{
+			 clear: both;
+  			outline: 1px solid yellow;
+		}
+	</style>
+</head>
+<body>
+		<div class="wrap lineh-wrap">
+			<div class="lineh item com-text display-ib">vertical align center by line-height</div>
+		</div>
+		<div class="wrap abs-wrap pr">
+			<div class="abs item com-text ycenter-abs-t">vertical align center by Absolute Positioning and translating</div>
+		</div>
+		<div class="wrap abs2-wrap pr">
+			<div class="abs2 item com-text ycenter-abs-margin">vertical align center by Absolute Positioning and stretchging</div>
+		</div>
+
+		<div class="wrap tabel-wrap">
+			<div class="tabel item com-text display-ib">vertical align center by tabel cell</div>
+		</div>
+		<div class="wrap equaltb-wrap">
+			<div class="equaltb  item com-text ">vertical align center by Equal Top and Bottom Padding </div>
+		</div>
+		<div class="wrap floater-wrap">
+	  		<div class="floater"></div>
+	  		<div class="item comtext">vertical align center by Floater Div
+
+</div>
+		</div>
+
+	<script type="text/javascript" src = 'lib/jquery-2.1.4.min.js'></script>
+	<script type="text/javascript">
+		$(function () {
+			
+		})
+	</script>
+</body>
+</html>

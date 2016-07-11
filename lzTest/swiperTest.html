@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>swiper</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/waterfall.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<style type="text/css">
+		input[type= "radio"],
+		input[tupe = "checkbox"]
+		.main{
+			width:95%;
+			margin:20px auto;
+			background: #fff;
+		}
+		/* swiper */
+		.detail-swiper{
+		    margin-top: 1.375rem;
+		}
+		.detail-pic-wrap{
+		    margin-bottom: 1.375rem;
+		}
+		.detail-footer{
+		    border:none;
+		}
+		.detail-swiper .swiper-container{
+		    width: 100%;
+		    height: 10rem;
+		    margin-top:1.375rem;
+		    position: relative;
+		}
+		.detail-swiper .swiper-slide{
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		} 
+
+		.detail-swiper .swiper-pagination {
+		  width:1.25rem;
+		  height: 1.25rem;
+		  line-height: 1.25rem;
+		  position: absolute;
+		  left: 100%;
+		  margin-left: -1.5rem;
+		  bottom:.3rem;
+		  border-radius: 0.625rem;
+		  background:rgba(0, 0, 0, 0.5);
+		  color:#fff;
+		}
+		.detail-swiper .swiper-pagination span{
+		  color:#fff;
+		  
+		}
+		.detail-swiper .swiper-pagination .swiper-pagination-current{
+		  font-size: 18px;
+		  
+		}
+		.detail-swiper .swiper-pagination .swiper-pagination-total{
+		  font-size: 12px;
+		  
+		}
+		.btns{
+			text-align: right;
+		}
+		.btns button{
+			width: 80px;
+			height: 60px;
+			background: #939;
+			color: #fff;
+		}
+		.btns button:active{
+			background: #c09;
+			opacity:0.5;
+
+		}
+		.waterfall-container{
+		    -webkit-column-width:160px;
+		    -moz-column-width:160px; 
+			  -webkit-column-gap:5px;
+			  -moz-column-gap:5px;
+			}
+
+		/*数据块 砖块*/
+
+		.waterfall-container label{
+			width:160px;
+		    margin:4px 0;
+		    overflow: hidden;
+		    display:block;
+		}
+		
+		.waterfall-container  label input{
+			float:left;
+			margin-top:10px;
+			opacity:0.3;
+		}
+		.waterfall-container  label input:checked + img{
+			opacity:0.3;
+		}
+		
+
+	</style>
+</head>
+<body>
+
+	<h2>选择四张图片后点击确定改变swiper的图片</h2>
+	<h4>解决swiper图片尺寸不一时的bug</h4>
+	<div class="swiper detail-swiper" id="js_swiper">
+        <div class="swiper-container swiper-container-horizontal">
+          <div class="swiper-wrapper" style="transform: translate3d(-3645px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide slider4 swiper-slide-duplicate swiper-slide-next" style="background: url(&quot;images/0.jpg&quot;)  no-repeat center;background-size:100% auto; width: 729px;" data-swiper-slide-index="3"></div>
+              <div class="swiper-slide slider1" style="background: url(&quot;images/0.jpg&quot;)  no-repeat center;background-size:100% auto;  width: 729px;" data-swiper-slide-index="0"></div>
+              <div class="swiper-slide slider2" style="background: url(&quot;images/1.jpg&quot;)  no-repeat center;background-size:100% auto;  width: 729px;" data-swiper-slide-index="1"></div>
+              <div class="swiper-slide slider3" style="background: url(&quot;images/2.jpg&quot;) no-repeat center;background-size:100% auto; width: 729px;" data-swiper-slide-index="2"></div>
+              <div class="swiper-slide slider4 swiper-slide-prev" style="background: url(&quot;images/3.jpg&quot;)  no-repeat center;background-size:100% auto;  width: 729px;" data-swiper-slide-index="3"></div>
+          <div class="swiper-slide slider1 swiper-slide-duplicate swiper-slide-active" style="background: url(&quot;images/1.jpg&quot;)  no-repeat center;background-size:100% auto;  width: 729px;" data-swiper-slide-index="0"></div></div>
+          <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-fraction"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">4</span></div>
+            
+        </div>      
+    	</div>
+
+        <h2>选中图片后透明度会改变</h2>
+        <div class="btns">
+        	<button class="confirm">确定</button>
+        	<button class="cancel">取消</button>
+        </div>
+      <div class="waterfall-container">
+      	<label for="img0" ><input  type="checkbox" id="img0" checked><img src="images/0.jpg" alt="" ></label>
+      	<label for="img1" ><input  type="checkbox" id="img1" checked><img src="images/1.jpg" alt="" ></label>
+
+      	<label for="img2" ><input  type="checkbox" id="img2" checked><img src="images/2.jpg" alt="" ></label>
+      	<label for="img3" ><input  type="checkbox" id="img3" checked><img src="images/3.jpg" alt="" ></label>
+
+      	
+      	<label for="img4 " ><input type="checkbox" id="img4"><img src="images/4.jpg" alt="" ></label>
+      	<label for="img5" ><input type="checkbox" id="img5"><img src="images/5.jpg" alt="" ></label>
+      	<label for="img6" ><input type="checkbox" id="img6"><img src="images/6.jpg" alt="" ></label>
+      	<label for="img7" ><input type="checkbox" id="img7"><img src="images/7.jpg" alt="" ></label>
+      	<label for="img8" ><input type="checkbox" id="img8"><img src="images/8.jpg" alt="" ></label>
+      	<label for="img9" ><input type="checkbox" id="img9"><img src="images/9.jpg" alt="" ></label>
+      	<label for="img10" ><input type="checkbox" id="img10"><img src="images/10.jpg" alt="" ></label>
+      	<label for="img11" ><input type="checkbox" id="img11"><img src="images/11.jpg" alt="" ></label>
+      	<label for="img12" ><input type="checkbox" id="img12"><img src="images/12.jpg" alt="" ></label>
+      	<label for="img13" ><input type="checkbox" id="img13"><img src="images/13.jpg" alt="" ></label>
+      	<label for="img14" ><input type="checkbox" id="img14"><img src="images/14.jpg" alt="" ></label>
+      	<label for="img15" ><input type="checkbox" id="img15"><img src="images/15.jpg" alt="" ></label>
+      	<label for="img16" ><input type="checkbox" id="img16"><img src="images/16.jpg" alt="" ></label>
+      	<label for="img17" ><input type="checkbox" id="img17"><img src="images/17.jpg" alt="" ></label>
+      	<label for="img18" ><input type="checkbox" id="img18"><img src="images/18.jpg" alt="" ></label>
+      	<label for="img19" ><input type="checkbox" id="img19"><img src="images/19.jpg" alt="" ></label>
+		
+		
+	</div>
+      
+    
+
+    <script type="text/javascript" src = "lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src = "lib/swiper.min.js"></script>
+    <script type="text/javascript">
+    	
+
+    	 /*选取四张图片里面高度比例最大的，设置swiper的高度为最大高度*/
+
+    	 function resizeSwiper() {
+    	 	var hRatialArr = [];
+    	 	var $seles = $('.waterfall-container  label input:checked');
+    	 	$seles.each(function (index ,ele) {
+    	 		var $img = $(ele).next('img');
+    	 		hRatialArr.push($img.height()/$img.width());
+    	 	});
+    	 	console.log(hRatialArr);
+
+    	 	var maxHRatial = Math.max.apply( null, hRatialArr);//数组pinHArr中的最小值minH
+            var maxHIndex = $.inArray( maxHRatial, hRatialArr);
+            var $swiperCon = $(".detail-swiper .swiper-container");
+            var swiperW = $swiperCon.width();
+            var swiperH = swiperW * maxHRatial;
+           $swiperCon.css({
+           	'height':swiperH,
+           	'width':swiperW
+           });
+    	 }
+    	 
+    	 $(function () {
+    	  var mySwiper = new Swiper('.swiper-container',{
+          autoplay : 5000,//可选选项，自动滑动
+          loop : true,//可选选项，开启循环
+          nextButton: '.swiper-button-next',
+        	pagination: '.swiper-pagination',
+        	paginationType: 'fraction'
+          });
+    	 resizeSwiper();
+    	 $('.btns .confirm').bind('click',function () {
+    	 	alert()
+    	 	resizeSwiper();
+
+    	 },false);
+    	 $('.btns .cancel').bind('click',function () {
+    	 	alert()
+    	 	$('.waterfall-container  label input:checked').prop('checked', false);
+    	 },false)
+    	 })
+    </script>
+</body>
+</html>

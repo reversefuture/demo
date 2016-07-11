@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pseudo</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		.com-text{
+			background: #eee;
+			border-radius: 5px;
+			font-family: simsun;
+			margin: 0 10px 10px ;
+		}
+		.pActive:active{
+			color:#f00;
+			font-family: Microsoft Yahei;
+		}
+	</style>
+</head>
+<body>
+	<p class="pActive com-text">
+		按时pseudo class :active test in &lt;p&gt;
+	</p>
+	<pre class="com-text cssAttrInJs">按时/*css style attribute in javascript*/
+			$('.pActive')[0].style.backgroundColor = '#ccc';</pre >
+	<script type="text/javascript" src = 'lib/jquery-2.1.4.min.js'></script>
+	<script type="text/javascript">
+		$(function () {
+			/*css style attribute in javascript*/
+			$('.cssAttrInJs')[0].style.backgroundColor = '#a99';
+			$('.cssAttrInJs')[0].style.borderBottom = '2px solid #f00';
+		})
+	</script>
+</body>
+</html>
