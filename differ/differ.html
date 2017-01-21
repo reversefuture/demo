@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Text Differ</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="main">
+		<header>
+			<div class="btnWrap">
+				<button class="btn" id="btnStart">Diff</button>
+				<button class="btn" id="btnReset">Reset</button>
+			</div>
+		</header>
+		<main>
+			<div class="left">
+				<textarea name="leftText" id="leftInp" cols="30" rows="10" >
+					
+				</textarea>
+				
+			</div>
+			<div class="right">
+				<textarea name="rightText" id="rightInp" cols="30" rows="10" >
+					
+				</textarea>
+			</div>
+			<dif class="leftDiff">
+				<div id="leftShow">
+					
+				</div>
+			</dif>
+			<div class="rightDiff">
+				<div id="rightShow">
+					
+				</div>
+			</div>
+
+		</main>
+		<footer>
+		
+		</footer>
+	</div>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="differ.js"></script>
+</body>
+</html>

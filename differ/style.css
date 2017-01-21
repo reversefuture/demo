@@ -1,0 +1,49 @@
+.main {
+	width: 80%;
+	background-color: #ebf6f7;
+	margin:auto;
+}
+
+.left,.right,.leftDiff,.rightDiff {
+	width: 50%;
+	float: left;
+	background-color: #ebf6f7;
+	box-sizing: border-box;
+}
+#leftInp,#rightInp,#leftShow,#rightShow{
+	width: 90%;
+	margin:10px auto 10px;
+	display: block;
+	background-color: #fff;
+}
+
+.leftDiff,.rightDiff{
+	margin-top: 10px;
+}
+#leftShow,#rightShow{
+	min-height: 600px;
+}
+
+header {
+	background-color: #7ebeab;
+	padding:5px;
+}
+main{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.btnWrap{
+	margin:auto;
+	display: inline-block;
+	position: relative;
+	left:50%;
+	transform: translate(-50%,0);
+}
+.btn{
+	background-color: #f08300;
+	width: 60px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	
+}
