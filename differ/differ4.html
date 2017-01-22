@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>differ</title>
+	<script type="text/javascript"src="diffview.js"></script>
+<link rel="stylesheet"type="text/css"href="diffview.css"/>
+<script type="text/javascript"src="jsdiff.js"></script>
+<script type="text/javascript"src="difflib.js"></script>
+</head>
+<body>
+<script>
+window.onload = function(){
+
+var input = document.getElementById("input");
+
+var output = document.getElementById("output");
+
+var form = document.getElementById("form");
+
+
+input.value ="Two pieces to the puzzlennDiff script by snowtidenSnowtide script has no word diffnCombine the two and it rocks!";
+
+output.value ="Two pieces to the puzzlennDiff script by john resignResig script has no line by line diffnnCombine the two and it rocks!";
+
+
+form.onsubmit = function(e){
+
+
+if (e) e.preventDefault();
+
+
+if (typeof event !="undefined") event.returnValue = false;
+
+
+
+diffUsingJS ();
+
+
+return false;
+
+};
+};
+
+function diffUsingJS () {
+
+var base = difflib.stringAsLines(document.getElementById("input").value);
+
+var newtxt = difflib.stringAsLines(document.getElementById("output").value);
+
+var sm = new difflib.SequenceMatcher(base, newtxt);
+
+var opcodes = sm.get_opcodes();
+
+var diffoutputdiv = document.getElementById("diffoutput");
+
+while (diffoutputdiv.firstChild) diffoutputdiv.removeChild(diffoutputdiv.firstChild);
+
+var contextSize = 3;
+
+contextSize = contextSize ? contextSize : null;
+
+diffoutputdiv.appendChild(diffview.buildView({ baseTextLines:base,
+
+newTextLines:newtxt,
+
+opcodes:opcodes,
+
+baseTextName:"Old",
+
+newTextName:"New",
+
+contextSize:contextSize,
+ viewType: 0}));
+
+
+}
+</script>
+<div style="float:left;width:50%">
+<form id="form"><b>Old:</b><br/>
+<textarea cols="60"rows="10"id="input"></textarea><br/>
+
+<div>
+<b>New:</b><br/>
+<textarea cols="60"rows="10"id="output"></textarea>
+</div>
+<input type="submit"value="Diff"/></form><br/>
+</div>
+
+<div id="diffoutput"style="clear:both;width:100%;"> </div>
+<div style="clear:both;">&nbsp;</div>
+</body>
+</html>
